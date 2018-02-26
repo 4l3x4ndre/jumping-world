@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Jumping world</title>
+    <meta charset="utf-8">
+    <style media="screen">
+
+    body {
+      background: #5c5c8a;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00e64d;
+      text-shadow: 1px 1px black;
+    }
+
+    #panel {
+      position: absolute;
+      background: purple;
+      width: 130px;
+      height: 30px;
+      z-index: 1000;
+    }
+
+    #panelText {
+      position: absolute;
+      top: -18px;
+      left: 5px;
+      font-size: 20px;
+      text-align: center;
+      color: white;
+      z-index: 1000;
+    }
+
+    #GameOver {
+      position: absolute;
+      width: 300px;
+      height: 90px;
+      display: none;
+      font-size: 40px;
+      font-weight: bold;
+      color: white;
+      left: 50px;
+      top: 300px;
+      z-index: 2000;
+    }
+
+    #playground {
+      background: #00a3cc;
+      width: 400px;
+      height: 400px;
+      position: relative;
+      border-width: 2px;
+      border-color: black;
+      border-style: solid;
+      overflow: hidden;
+      top: 30px;
+    }
+
+    .obstacle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #b30000;
+      left: 600px;
+      top: 600px;
+      position: absolute;
+      z-index: 1000;
+
+    }
+
+    #player {
+      width: 20px;
+      height: 40px;
+      background: blue;
+      top: 270px;
+      left: 180px;
+      position: absolute;
+      z-index: 2;
+    }
+
+    #world {
+      width: 600px;
+      height: 680px;
+      border-radius: 50%;
+      background: #009933;
+      top: 305px;
+      left: -105px;
+      z-index: 500;
+      position: absolute;
+    }
+
+    #score {
+      font-size: 25px;
+      color: black;
+      font-weight: bold;
+    }
+
+    .nuages {
+      width: 80;
+      height: 50;
+    }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Jumping World</h1>
+    <center>
+
+      <p id="score">Score</p>
+
+      <div id="playground">
+        <div id="panel">
+          <p id="panelText">Press enter</p>
+        </div>
+        <p id="GameOver">Game Over</p>
+        <div id="world"></div>
+        <div id="player"></div>
+      </div>
+    </center>
+
+  </body>
+
+  <script src="./jquery.js"></script>
+  <script src="./sound.js"></script>
+  <script src="./obstacle.js"></script>
+  <script src="./nuages.js"></script>
+  <script src="./player.js"></script>
+  <script src="./manager.js"></script>
+
+</html>
